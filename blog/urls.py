@@ -14,12 +14,12 @@ urlpatterns = [
   #Example: /blog/archive/
   path('archive/', views.PostAV.as_view(), name='post_archive'),
   #Example: /blog/archive/2019/
-  path('archive/<int:year>/', views.PostYAC.as_view(), name='post_year_archive'),
+  path('archive/<int:year>/', views.PostYAV.as_view(), name='post_year_archive'),
   #Example: /blog/archive/2019/nov/
   path('archive/<int:tear>/<str:month>/', views.PostMAV.as_view(), name='post_month_archive'),
   #Example: /blog/archive/2019/nov/10/
   path('archive/<int:tear>/<str:month>/<int:day>', views.PostDAV.as_view(), name='post_day_archive'),
   #Example: /blog/archive/today/
-  path('archive/tiday/', views.PostTAV.as_view(), name='post_today_archive'),
+  path('archive/today/', views.PostTAV.as_view(), name='post_today_archive'),
 
 ]

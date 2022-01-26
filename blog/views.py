@@ -21,7 +21,7 @@ class PostDV(DetailView):
 # -- ArchiveView
 class PostAV(ArchiveIndexView):
   model = Post
-  date_filed = 'modify_dt'
+  date_field = 'modify_dt'
 
 class PostYAV(YearArchiveView):
   model = Post
