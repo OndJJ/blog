@@ -1,4 +1,5 @@
 # blog
 ### 책 - Django로 배우는 쉽고 바른 웹 개발 파이썬 웹 프로그래밍
 
-![111](https://user-images.githubusercontent.com/86146128/152321532-a188f553-d4be-4f2e-af27-e367bb0409e6.png)
+![1233](https://user-images.githubusercontent.com/86146128/153158786-a5416575-837e-4b5b-893e-4d44434d6d44.png)
+
