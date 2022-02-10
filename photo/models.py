@@ -1,3 +1,4 @@
+from turtle import title
 from django.db import models
 from django.urls import reverse
 
@@ -37,3 +38,24 @@ class Photo(models.Model):
         return reverse('photo:photo_detail', args=(self.id,))
 
 
+#-- N:N 관계
+class Publication(models.Model):
+    title = models.CharField(max_length=30)
+    albums = models.ManyToManyField(Album)
+
+
+#-- one:one 관계
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+
+    def __str__(self):
+        return f"Place-{self.name}"
+
+class Restaurant(models.Model):
+    place = models.OneToOneField(Place, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    serves_pizza = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Restaurant-{self.name}"
