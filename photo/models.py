@@ -2,7 +2,7 @@ from turtle import title
 from django.db import models
 from django.urls import reverse
 
-from photo.fields import ThumbnailImageField
+#from photo.fields import ThumbnailImageField
 
 
 class Album(models.Model):
@@ -24,7 +24,8 @@ class Photo(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
     title = models.CharField('TITLE', max_length=30)
     description = models.TextField('Photo Description', blank=True)
-    image = ThumbnailImageField('IMAGE', upload_to='photo/%Y/%m')
+    #image = ThumbnailImageField('IMAGE', upload_to='photo/%Y/%m')-->sorlimage
+    image = models.ImageField('IMAGE', upload_to='SorlPhoto/%Y')
     upload_dt = models.DateTimeField('UPLOAD DATE', auto_now_add=True)
     owner = models.ForeignKey('auth.User', on_delete=models.CASCADE, verbose_name='OWNER', blank=True, null=True)
 
