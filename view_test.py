@@ -29,6 +29,7 @@ class PostLV(ListView):
   model = Post
 
 
+
 #-- 폼을 보여주기 위한 제네릭 뷰 FormView, form_class와 폼을 렌더링하는 template_name, success_url 속성 등
 class SearchFormView(FormView):
     form_class = PostSearchForm
